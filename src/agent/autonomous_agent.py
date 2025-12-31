@@ -22,6 +22,7 @@ from ..api.groq_client import GROQClient
 from ..api.materials_project_client import MaterialsProjectClient
 from ..config.settings import Settings
 from ..utils.logger import setup_logger
+from ..utils.session_manager import SessionManager
 
 logger = setup_logger()
 
@@ -83,7 +84,8 @@ class AutonomousScientist:
         query: str,
         max_papers: int = 20,
         max_hypotheses: int = 20,
-        max_iterations: int = 1
+        max_iterations: int = 1,
+        session_id: Optional[str] = None
     ) -> Dict:
         """
         Run autonomous research cycle
@@ -93,11 +95,18 @@ class AutonomousScientist:
             max_papers: Papers to collect
             max_hypotheses: Hypotheses to generate
             max_iterations: Max research cycles
+            session_id: Optional session ID for tracking
 
         Returns:
             Summary dict with all results
         """
         logger.info(f"🚀 Starting autonomous research on: {query}")
+        
+        # Initialize session manager if session_id provided
+        session_mgr = SessionManager() if session_id else None
+        if session_mgr and session_id:
+            session_mgr.update_session_status(session_id, "running")
+            session_mgr.update_session_progress(session_id, 0, "Starting", "Initializing research cycle")
 
         for iteration in range(max_iterations):
             self.iteration = iteration + 1
@@ -107,43 +116,101 @@ class AutonomousScientist:
 
             # Phase 1: Collect papers
             logger.info("📚 Phase 1: Collecting papers...")
+            if session_mgr and session_id:
+                session_mgr.update_session_progress(
+                    session_id, 10, "Collecting Papers", 
+                    f"Searching arXiv for papers on: {query}"
+                )
             self.papers = self._collect_papers(query, max_papers)
             logger.success(f"Collected {len(self.papers)} papers")
+            if session_mgr and session_id:
+                session_mgr.update_session_progress(
+                    session_id, 20, "Papers Collected",
+                    f"Found {len(self.papers)} relevant papers"
+                )
 
             # Phase 2: Analyze papers (if available)
             if self.analyzer:
                 logger.info("\n🤖 Phase 2: Analyzing papers...")
+                if session_mgr and session_id:
+                    session_mgr.update_session_progress(
+                        session_id, 30, "Analyzing Papers",
+                        f"AI analyzing {len(self.papers)} papers for insights"
+                    )
                 self.papers = self._analyze_papers(self.papers)
                 self.gaps = self._extract_gaps(self.papers)
                 logger.success(f"Found {len(self.gaps)} research gaps")
+                if session_mgr and session_id:
+                    session_mgr.update_session_progress(
+                        session_id, 45, "Analysis Complete",
+                        f"Identified {len(self.gaps)} research gaps"
+                    )
 
             # Phase 3: Generate hypotheses (if available)
             if self.generator and self.gaps:
                 logger.info("\n💡 Phase 3: Generating hypotheses...")
+                if session_mgr and session_id:
+                    session_mgr.update_session_progress(
+                        session_id, 55, "Generating Hypotheses",
+                        f"AI generating novel hypotheses from {len(self.gaps)} gaps"
+                    )
                 self.hypotheses = self._generate_hypotheses(
                     self.gaps, max_hypotheses)
                 logger.success(f"Generated {len(self.hypotheses)} hypotheses")
+                if session_mgr and session_id:
+                    session_mgr.update_session_progress(
+                        session_id, 65, "Hypotheses Generated",
+                        f"Created {len(self.hypotheses)} testable hypotheses"
+                    )
 
             # Phase 4: Test hypotheses
             if len(self.hypotheses) > 0:
                 logger.info("\n🧪 Phase 4: Testing hypotheses...")
+                if session_mgr and session_id:
+                    session_mgr.update_session_progress(
+                        session_id, 75, "Testing Hypotheses",
+                        f"Computational validation of {len(self.hypotheses)} hypotheses"
+                    )
                 self.test_results = self._test_hypotheses(self.hypotheses)
                 logger.success(f"Tested {len(self.test_results)} hypotheses")
+                if session_mgr and session_id:
+                    session_mgr.update_session_progress(
+                        session_id, 85, "Testing Complete",
+                        f"Validated {len(self.test_results)} hypotheses"
+                    )
 
             # Phase 5: Evaluate results
             logger.info("\n📊 Phase 5: Evaluating results...")
+            if session_mgr and session_id:
+                session_mgr.update_session_progress(
+                    session_id, 90, "Evaluating Results",
+                    "Identifying promising discoveries"
+                )
             discoveries = self._evaluate_results(self.test_results)
 
             if discoveries:
                 logger.success(
                     f"🎉 Found {len(discoveries)} promising discoveries!")
                 self.discoveries.extend(discoveries)
+                if session_mgr and session_id:
+                    session_mgr.update_session_progress(
+                        session_id, 95, "Discoveries Found",
+                        f"🎉 {len(discoveries)} promising discoveries identified!"
+                    )
 
         # Generate final report
         summary = self._generate_summary()
 
         logger.success(f"\n🎉 Autonomous research complete!")
         logger.info(f"Total discoveries: {len(self.discoveries)}")
+        
+        # Mark session as completed
+        if session_mgr and session_id:
+            session_mgr.update_session_progress(
+                session_id, 100, "Completed",
+                f"Research complete! Found {len(self.discoveries)} discoveries"
+            )
+            session_mgr.update_session_status(session_id, "completed")
 
         return summary
 
@@ -288,7 +355,7 @@ class AutonomousScientist:
             'timestamp': datetime.now().isoformat()
         }
 
-    def save_results(self, output_dir: str = "data/agent_results"):
+    def save_results(self, output_dir: str = "data/agent_results", session_id: Optional[str] = None):
         """Save all results to files"""
         output_path = Path(output_dir)
         output_path.mkdir(parents=True, exist_ok=True)
@@ -313,3 +380,11 @@ class AutonomousScientist:
             json.dump(summary, f, indent=2)
 
         logger.success(f"Results saved to {output_dir}/")
+        
+        # Update session with results path
+        if session_id:
+            try:
+                session_mgr = SessionManager()
+                session_mgr.save_session_results(session_id, str(output_path))
+            except Exception as e:
+                logger.warning(f"Could not update session results path: {e}")

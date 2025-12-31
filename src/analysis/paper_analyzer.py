@@ -12,10 +12,42 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 import pandas as pd
 from loguru import logger
+from functools import wraps
 
 from ..api.gemini_client import GeminiClient
 from ..api.groq_client import GROQClient
 from ..data_collection.paper_collector import Paper
+
+
+def retry_on_error(max_retries: int = 3, backoff_factor: float = 2.0):
+    """Decorator to retry function on failure with exponential backoff."""
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            retries = 0
+            last_exception = None
+            
+            while retries < max_retries:
+                try:
+                    return func(*args, **kwargs)
+                except Exception as e:
+                    retries += 1
+                    last_exception = e
+                    if retries < max_retries:
+                        wait_time = backoff_factor ** retries
+                        logger.warning(
+                            f"Attempt {retries}/{max_retries} failed: {e}. "
+                            f"Retrying in {wait_time:.1f}s..."
+                        )
+                        time.sleep(wait_time)
+                    else:
+                        logger.error(
+                            f"All {max_retries} attempts failed for {func.__name__}: {e}"
+                        )
+            
+            raise last_exception
+        return wrapper
+    return decorator
 
 
 @dataclass
@@ -132,22 +164,125 @@ class PaperAnalyzer:
 
         logger.info(f"Analyzing paper: {paper.title}")
 
-        # Step 1: Fast entity extraction with GROQ
-        logger.debug("Step 1: Extracting entities (GROQ)")
-        entities = self._extract_entities(paper)
+        try:
+            # Step 1: Fast entity extraction with GROQ (with retry)
+            logger.debug("Step 1: Extracting entities (GROQ)")
+            entities = self._extract_entities_with_retry(paper)
 
-        # Step 2: Classification with GROQ
-        logger.debug("Step 2: Classifying paper (GROQ)")
-        research_type, maturity_level = self._classify_paper(paper)
+            # Step 2: Classification with GROQ (with retry)
+            logger.debug("Step 2: Classifying paper (GROQ)")
+            research_type, maturity_level = self._classify_paper_with_retry(paper)
 
-        # Step 3: Deep analysis with Gemini
-        logger.debug("Step 3: Deep analysis (Gemini)")
-        deep_analysis = self._deep_analyze(paper, entities, focus_areas)
+            # Step 3: Deep analysis with Gemini (with retry)
+            logger.debug("Step 3: Deep analysis (Gemini)")
+            deep_analysis = self._deep_analyze_with_retry(paper, entities, focus_areas)
 
-        # Step 4: Relevance scoring
-        logger.debug("Step 4: Scoring relevance")
-        relevance_score, confidence = self._score_relevance(
-            paper, deep_analysis)
+            # Step 4: Relevance scoring
+            logger.debug("Step 4: Scoring relevance")
+            relevance_score, confidence = self._score_relevance(
+                paper, deep_analysis)
+
+            # Combine results
+            analysis = PaperAnalysis(
+                arxiv_id=paper.arxiv_id,
+                title=paper.title,
+                materials=entities.get("materials", []),
+                properties=entities.get("properties", []),
+                methods=entities.get("methods", []),
+                applications=entities.get("applications", []),
+                performance_metrics=entities.get("performance_metrics", []),
+                key_findings=deep_analysis["key_findings"],
+                research_significance=deep_analysis["significance"],
+                novelty_assessment=deep_analysis["novelty"],
+                limitations=deep_analysis["limitations"],
+                future_directions=deep_analysis["future_directions"],
+                research_type=research_type,
+                maturity_level=maturity_level,
+                relevance_score=relevance_score,
+                confidence_score=confidence,
+                analysis_timestamp=pd.Timestamp.now().isoformat()
+            )
+
+            # Validate analysis quality
+            if not self._validate_analysis(analysis):
+                logger.warning(f"Analysis validation failed for {paper.arxiv_id}")
+                raise ValueError("Analysis quality check failed - insufficient data extracted")
+
+            # Cache results
+            with open(cache_file, 'w', encoding='utf-8') as f:
+                json.dump(analysis.to_dict(), f, indent=2, ensure_ascii=False)
+
+            logger.info(
+                f"✅ Analysis complete (relevance: {relevance_score:.1f}/10)")
+            return analysis
+            
+        except Exception as e:
+            logger.error(f"Failed to analyze paper {paper.arxiv_id}: {e}")
+            # Return minimal analysis with error flag
+            return self._create_failed_analysis(paper, str(e))
+
+    def _validate_analysis(self, analysis: PaperAnalysis) -> bool:
+        """Validate that analysis has sufficient quality data."""
+        # Check that key findings are not empty
+        if not analysis.key_findings or len(analysis.key_findings) == 0:
+            return False
+        
+        # Check that at least some entities were extracted
+        total_entities = (
+            len(analysis.materials) + 
+            len(analysis.properties) + 
+            len(analysis.methods)
+        )
+        if total_entities == 0:
+            return False
+        
+        # Check that relevance score is reasonable
+        if analysis.relevance_score <= 0 or analysis.relevance_score > 10:
+            return False
+        
+        return True
+
+    def _create_failed_analysis(self, paper: Paper, error_msg: str) -> PaperAnalysis:
+        """Create a minimal analysis object for failed papers."""
+        return PaperAnalysis(
+            arxiv_id=paper.arxiv_id,
+            title=paper.title,
+            materials=[],
+            properties=[],
+            methods=[],
+            applications=[],
+            performance_metrics=[],
+            key_findings=["Analysis failed"],
+            research_significance=f"Analysis failed: {error_msg}",
+            novelty_assessment="Unknown",
+            limitations=["Analysis failed"],
+            future_directions=["Analysis failed"],
+            research_type="unknown",
+            maturity_level="unknown",
+            relevance_score=0.0,
+            confidence_score=0.0,
+            analysis_timestamp=pd.Timestamp.now().isoformat()
+        )
+
+    @retry_on_error(max_retries=3, backoff_factor=2.0)
+    def _extract_entities_with_retry(self, paper: Paper) -> Dict[str, List[str]]:
+        """Extract entities with retry logic."""
+        return self._extract_entities(paper)
+
+    @retry_on_error(max_retries=3, backoff_factor=2.0)
+    def _classify_paper_with_retry(self, paper: Paper) -> Tuple[str, str]:
+        """Classify paper with retry logic."""
+        return self._classify_paper(paper)
+
+    @retry_on_error(max_retries=3, backoff_factor=2.0)
+    def _deep_analyze_with_retry(
+        self,
+        paper: Paper,
+        entities: Dict[str, List[str]],
+        focus_areas: Optional[List[str]] = None
+    ) -> Dict[str, Any]:
+        """Deep analyze with retry logic."""
+        return self._deep_analyze(paper, entities, focus_areas)
 
         # Combine results
         analysis = PaperAnalysis(
