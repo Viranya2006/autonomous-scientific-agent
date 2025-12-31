@@ -49,6 +49,7 @@ cp .env.example .env
 ```
 
 Edit `.env`:
+
 ```env
 GEMINI_API_KEY=your-gemini-api-key
 GROQ_API_KEY=your-groq-api-key
@@ -56,6 +57,7 @@ MP_API_KEY=your-materials-project-key
 ```
 
 **Get API Keys (All Free):**
+
 - **Gemini:** https://makersuite.google.com/app/apikey (1,500 requests/day)
 - **GROQ:** https://console.groq.com/ (30 requests/min)
 - **Materials Project:** https://next-gen.materialsproject.org/api (50,000 requests/month)
@@ -93,7 +95,8 @@ Open http://localhost:8501 in your browser
 
 **Input:** "lithium ion battery cathode materials"
 
-**Output:** 
+**Output:**
+
 - 20 relevant papers analyzed
 - 15 knowledge gaps identified
 - 20 novel hypotheses (100% novelty rate)
@@ -126,8 +129,10 @@ Interactive web interface with 5 tabs:
 Edit `scripts/run_agent.py`:
 
 # Mac/Linux
+
 source venv/bin/activate
-```
+
+````
 
 ### **3. Get API Keys** (15 minutes)
 
@@ -153,7 +158,7 @@ nano .env     # Linux/Mac
 GEMINI_API_KEY=your_actual_key_here
 HF_TOKEN=your_actual_token_here
 MP_API_KEY=your_actual_key_here
-```
+````
 
 ### **5. Test Everything**
 
