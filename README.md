@@ -20,7 +20,7 @@ An AI-powered autonomous research assistant that conducts scientific research in
 ### **1. Clone the Repository**
 
 ```bash
-git clone https://github.com/yourusername/autonomous-scientific-agent.git
+git clone https://github.com/Viranya2006/autonomous-scientific-agent.git
 cd autonomous-scientific-agent
 ```
 
