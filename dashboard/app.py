@@ -3,6 +3,7 @@ Streamlit Dashboard for Autonomous Scientific Agent
 Beautiful web interface for monitoring and exploring research
 """
 
+from src.utils.session_manager import SessionManager
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -15,7 +16,6 @@ import threading
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from src.utils.session_manager import SessionManager
 
 # Page config
 st.set_page_config(
@@ -120,31 +120,35 @@ tab0, tab1, tab2, tab3, tab4, tab5 = st.tabs([
 # Tab 0: Home - Interactive Research Launcher
 with tab0:
     st.header("🏠 Research Control Center")
-    
+
     # Two columns: Launch new research | Active sessions
     col1, col2 = st.columns([1, 1])
-    
+
     with col1:
         st.subheader("🚀 Launch New Research")
-        
+
         with st.form("launch_research"):
             research_topic = st.text_area(
                 "Research Topic",
                 placeholder="Enter your research topic (e.g., 'high-entropy alloys for hydrogen storage')",
                 height=100
             )
-            
+
             col_a, col_b = st.columns(2)
             with col_a:
-                max_papers = st.number_input("Max Papers", min_value=5, max_value=100, value=20)
-                max_hypotheses = st.number_input("Max Hypotheses", min_value=3, max_value=50, value=10)
-            
+                max_papers = st.number_input(
+                    "Max Papers", min_value=5, max_value=100, value=20)
+                max_hypotheses = st.number_input(
+                    "Max Hypotheses", min_value=3, max_value=50, value=10)
+
             with col_b:
-                iterations = st.number_input("Iterations", min_value=1, max_value=10, value=3)
+                iterations = st.number_input(
+                    "Iterations", min_value=1, max_value=10, value=3)
                 ai_model = st.selectbox("AI Model", ["gemini", "groq"])
-            
-            submit = st.form_submit_button("🚀 Start Research", use_container_width=True)
-            
+
+            submit = st.form_submit_button(
+                "🚀 Start Research", use_container_width=True)
+
             if submit and research_topic:
                 try:
                     session_id = session_mgr.create_session(
@@ -155,18 +159,19 @@ with tab0:
                         ai_model=ai_model
                     )
                     st.success(f"✅ Research session created: {session_id}")
-                    st.info("⚠️ Note: Use scripts/run_agent.py to execute the research with this session_id")
+                    st.info(
+                        "⚠️ Note: Use scripts/run_agent.py to execute the research with this session_id")
                     st.rerun()
                 except Exception as e:
                     st.error(f"Error creating session: {e}")
             elif submit:
                 st.error("Please enter a research topic")
-    
+
     with col2:
         st.subheader("📋 Active Sessions")
-        
+
         sessions = session_mgr.list_sessions()
-        
+
         if sessions:
             for session in sessions[:5]:  # Show last 5 sessions
                 status_emoji = {
@@ -175,10 +180,10 @@ with tab0:
                     'completed': '✅',
                     'failed': '❌'
                 }.get(session['status'], '❓')
-                
+
                 with st.expander(f"{status_emoji} {session['research_topic'][:50]}..."):
                     col_x, col_y = st.columns([2, 1])
-                    
+
                     with col_x:
                         st.write(f"**Status:** {session['status']}")
                         st.write(f"**Created:** {session['created_at']}")
@@ -187,33 +192,33 @@ with tab0:
                         if session['progress']:
                             st.progress(session['progress'] / 100)
                             st.caption(f"Progress: {session['progress']}%")
-                    
+
                     with col_y:
                         if st.button("🗑️ Delete", key=f"del_{session['session_id']}"):
                             session_mgr.delete_session(session['session_id'])
                             st.success("Deleted!")
                             st.rerun()
-                        
+
                         if session['results_path']:
                             st.caption(f"📁 {session['results_path']}")
-                    
+
                     if session['error_message']:
                         st.error(f"Error: {session['error_message']}")
         else:
             st.info("No research sessions yet. Create one above!")
-    
+
     st.markdown("---")
-    
+
     # Quick stats
     st.subheader("📊 Session Statistics")
     if sessions:
         col_a, col_b, col_c, col_d = st.columns(4)
-        
+
         total = len(sessions)
         completed = len([s for s in sessions if s['status'] == 'completed'])
         running = len([s for s in sessions if s['status'] == 'running'])
         failed = len([s for s in sessions if s['status'] == 'failed'])
-        
+
         col_a.metric("Total Sessions", total)
         col_b.metric("✅ Completed", completed)
         col_c.metric("🔄 Running", running)
@@ -310,45 +315,51 @@ with tab2:
 
     if 'papers' in data and not data['papers'].empty:
         papers_df = data['papers'].copy()
-        
+
         # Check for failed analyses
         failed_papers = pd.DataFrame()
         if 'key_findings' in papers_df.columns:
             # Identify failed papers (empty key_findings or "Analysis failed" message)
             failed_mask = (
-                papers_df['key_findings'].isna() | 
+                papers_df['key_findings'].isna() |
                 (papers_df['key_findings'] == '') |
-                (papers_df['key_findings'].astype(str).str.contains('Analysis failed', case=False, na=False))
+                (papers_df['key_findings'].astype(str).str.contains(
+                    'Analysis failed', case=False, na=False))
             )
             failed_papers = papers_df[failed_mask]
-            papers_df = papers_df[~failed_mask]  # Show only successful ones initially
-        
+            # Show only successful ones initially
+            papers_df = papers_df[~failed_mask]
+
         # Display failed papers section if any exist
         if not failed_papers.empty:
             with st.expander(f"⚠️ Failed Analyses ({len(failed_papers)} papers)", expanded=False):
-                st.warning(f"The following {len(failed_papers)} papers failed analysis due to API errors or timeouts.")
-                
+                st.warning(
+                    f"The following {len(failed_papers)} papers failed analysis due to API errors or timeouts.")
+
                 for idx, paper in failed_papers.iterrows():
                     col_a, col_b = st.columns([4, 1])
-                    
+
                     with col_a:
                         st.markdown(f"**{paper.get('title', 'Untitled')}**")
                         st.caption(f"Authors: {paper.get('authors', 'N/A')}")
-                        
+
                         # Show error message if available
                         if 'research_significance' in paper and pd.notna(paper['research_significance']):
                             if 'failed' in str(paper['research_significance']).lower():
-                                st.caption(f"❌ {paper['research_significance']}")
-                    
+                                st.caption(
+                                    f"❌ {paper['research_significance']}")
+
                     with col_b:
                         if st.button("🔄 Retry", key=f"retry_{idx}"):
-                            st.info("Note: Re-run the agent with skip_cache=True to retry failed papers")
-                        
+                            st.info(
+                                "Note: Re-run the agent with skip_cache=True to retry failed papers")
+
                         if 'arxiv_id' in paper and pd.notna(paper['arxiv_id']):
-                            st.markdown(f"[📑 arXiv](https://arxiv.org/abs/{paper['arxiv_id']})", unsafe_allow_html=True)
-                    
+                            st.markdown(
+                                f"[📑 arXiv](https://arxiv.org/abs/{paper['arxiv_id']})", unsafe_allow_html=True)
+
                     st.markdown("---")
-        
+
         # Filters
         col1, col2 = st.columns([3, 1])
         with col1:

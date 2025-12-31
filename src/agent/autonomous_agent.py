@@ -101,12 +101,13 @@ class AutonomousScientist:
             Summary dict with all results
         """
         logger.info(f"🚀 Starting autonomous research on: {query}")
-        
+
         # Initialize session manager if session_id provided
         session_mgr = SessionManager() if session_id else None
         if session_mgr and session_id:
             session_mgr.update_session_status(session_id, "running")
-            session_mgr.update_session_progress(session_id, 0, "Starting", "Initializing research cycle")
+            session_mgr.update_session_progress(
+                session_id, 0, "Starting", "Initializing research cycle")
 
         for iteration in range(max_iterations):
             self.iteration = iteration + 1
@@ -118,7 +119,7 @@ class AutonomousScientist:
             logger.info("📚 Phase 1: Collecting papers...")
             if session_mgr and session_id:
                 session_mgr.update_session_progress(
-                    session_id, 10, "Collecting Papers", 
+                    session_id, 10, "Collecting Papers",
                     f"Searching arXiv for papers on: {query}"
                 )
             self.papers = self._collect_papers(query, max_papers)
@@ -203,7 +204,7 @@ class AutonomousScientist:
 
         logger.success(f"\n🎉 Autonomous research complete!")
         logger.info(f"Total discoveries: {len(self.discoveries)}")
-        
+
         # Mark session as completed
         if session_mgr and session_id:
             session_mgr.update_session_progress(
@@ -380,7 +381,7 @@ class AutonomousScientist:
             json.dump(summary, f, indent=2)
 
         logger.success(f"Results saved to {output_dir}/")
-        
+
         # Update session with results path
         if session_id:
             try:

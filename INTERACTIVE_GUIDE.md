@@ -21,6 +21,7 @@ The **Home** tab is your research control center with two main sections:
 #### 🆕 Launch New Research
 
 Fill out the research form:
+
 - **Research Topic**: Enter your scientific question (e.g., "high-entropy alloys for hydrogen storage")
 - **Max Papers**: Number of papers to collect (5-100)
 - **Max Hypotheses**: Number of hypotheses to generate (3-50)
@@ -32,6 +33,7 @@ Click **🚀 Start Research** to create a new research session.
 #### 📋 Active Sessions
 
 View all your research sessions with:
+
 - **Status indicators**: ⏳ Pending | 🔄 Running | ✅ Completed | ❌ Failed
 - **Live progress bars**: See real-time progress (0-100%)
 - **Current phase**: Know what the agent is doing
@@ -41,12 +43,12 @@ View all your research sessions with:
 
 ### Understanding Session Status
 
-| Status | Emoji | Meaning |
-|--------|-------|---------|
-| Pending | ⏳ | Session created, waiting to run |
-| Running | 🔄 | Agent actively researching |
-| Completed | ✅ | Research finished successfully |
-| Failed | ❌ | Error occurred during research |
+| Status    | Emoji | Meaning                         |
+| --------- | ----- | ------------------------------- |
+| Pending   | ⏳    | Session created, waiting to run |
+| Running   | 🔄    | Agent actively researching      |
+| Completed | ✅    | Research finished successfully  |
+| Failed    | ❌    | Error occurred during research  |
 
 ### Progress Phases
 
@@ -125,6 +127,7 @@ The **Papers** tab now shows failed analyses separately:
 ### Automatic Retry Logic
 
 The system now automatically retries failed operations:
+
 - **3 attempts** with exponential backoff (2s, 4s, 8s)
 - Applies to: entity extraction, classification, deep analysis
 - Logs each retry attempt for debugging
@@ -132,6 +135,7 @@ The system now automatically retries failed operations:
 ### Failed Analysis Data
 
 Failed papers are saved with:
+
 - `key_findings: ["Analysis failed"]`
 - `research_significance: "Analysis failed: [error message]"`
 - `relevance_score: 0.0`
@@ -140,29 +144,34 @@ Failed papers are saved with:
 ## 📈 Viewing Results
 
 ### Overview Tab
+
 - **Metrics**: Total papers, hypotheses, tests, discoveries
 - **Charts**: Novelty distribution, feasibility analysis
 - **Test results**: Pass/fail distribution
 
 ### Papers Tab
+
 - **Failed analyses section**: Review and retry failed papers
 - **Search and filter**: Find specific papers
 - **Sort options**: By relevance, title, or date
 - **Full details**: Abstract, findings, arXiv link
 
 ### Hypotheses Tab
+
 - **Filter by novelty**: Minimum novelty score slider
 - **Filter by feasibility**: High/Medium/Low categories
 - **Search**: Find specific hypotheses
 - **Detailed view**: Materials, methods, expected outcomes
 
 ### Experiments Tab
+
 - **Filter by result**: Show PASS/FAIL/INCONCLUSIVE
 - **Color-coded**: 🟢 Pass | 🔴 Fail | 🟡 Inconclusive
 - **Evidence**: Computational validation data
 - **Confidence**: Test confidence scores
 
 ### Discoveries Tab
+
 - **Promising results**: High-confidence findings
 - **Iteration tracking**: Which cycle found it
 - **Evidence**: Supporting data
@@ -171,44 +180,58 @@ Failed papers are saved with:
 ## 🎯 Best Practices
 
 ### 1. Create Sessions First
+
 Always create a session in the dashboard before running research to get live progress tracking.
 
 ### 2. Monitor Progress
+
 Keep the dashboard open while research runs to see real-time updates and catch errors early.
 
 ### 3. Review Failed Papers
+
 Check the Failed Analyses section after each run. Many failures are due to temporary API issues and can be retried.
 
 ### 4. Start Small
+
 For new topics, start with:
+
 - Max Papers: 10-20
 - Max Hypotheses: 5-10
 - Iterations: 1-2
 
 ### 5. Session Management
+
 Delete old/failed sessions regularly to keep the dashboard clean:
+
 - Click **🗑️ Delete** on any session
 - Failed sessions remain visible until deleted
 
 ## 🔍 Troubleshooting
 
 ### Dashboard Not Updating?
+
 Click **🔄 Refresh Data** in the sidebar.
 
 ### Session Stuck at 0%?
+
 The agent might not be running. Check:
+
 1. Is `run_agent.py` executing?
 2. Is the session_id correct?
 3. Check logs for errors
 
 ### Many Failed Papers?
+
 Common causes:
+
 - **API quota exceeded**: Wait and retry later
 - **Network issues**: Check internet connection
 - **Invalid API keys**: Verify `.env` file
 
 ### No Progress Updates?
+
 Ensure you're passing `session_id` to `agent.run()`:
+
 ```python
 agent.run(query="...", session_id=session_id)
 ```
@@ -216,6 +239,7 @@ agent.run(query="...", session_id=session_id)
 ## 📚 Database Location
 
 Sessions are stored in SQLite database:
+
 - **Location**: `data/sessions.db`
 - **Tables**: `sessions` and `session_logs`
 - **Backup**: Copy this file to save session history

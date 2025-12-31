@@ -5,6 +5,7 @@
 ### ✅ What's New
 
 #### 1. **SessionManager** - Database-Backed Session Tracking
+
 - SQLite database for persistent storage
 - Full session lifecycle management
 - Real-time progress tracking (0-100%)
@@ -14,6 +15,7 @@
 **File**: `src/utils/session_manager.py` (NEW - 264 lines)
 
 #### 2. **Interactive Home Tab** - Research Launcher GUI
+
 - Input research topics directly in dashboard
 - Configure all research parameters
 - View active sessions with live status
@@ -23,6 +25,7 @@
 **File**: `dashboard/app.py` (UPDATED - added 100+ lines)
 
 #### 3. **Progress Tracking** - Live Research Updates
+
 - 11 distinct progress phases (0% → 100%)
 - Status messages at each checkpoint
 - Automatic session completion
@@ -31,6 +34,7 @@
 **File**: `src/agent/autonomous_agent.py` (UPDATED - added session tracking)
 
 #### 4. **Error Recovery** - Automatic Retry Logic
+
 - 3 automatic retry attempts
 - Exponential backoff (2s, 4s, 8s)
 - Analysis validation
@@ -39,6 +43,7 @@
 **File**: `src/analysis/paper_analyzer.py` (UPDATED - added retry decorator)
 
 #### 5. **Failed Papers View** - Error Visibility & Recovery
+
 - Automatic detection of failed analyses
 - Separate expandable section
 - Retry buttons with instructions
@@ -51,35 +56,43 @@
 ## 🚀 Quick Start
 
 ### 1. Launch Dashboard
+
 ```bash
 streamlit run dashboard/app.py
 ```
 
 ### 2. Create Research Session
+
 - Navigate to **🏠 Home** tab
 - Fill out research form
 - Click **🚀 Start Research**
 - Copy the generated `session_id`
 
 ### 3. Run Research with Tracking
+
 Edit `scripts/run_agent.py`:
+
 ```python
 session_id = "session_20241231_143022"  # Your session ID
 ```
 
 Run:
+
 ```bash
 python scripts/run_agent.py
 ```
 
 ### 4. Watch Live Progress
+
 The dashboard will show:
+
 - Real-time progress bar (0-100%)
 - Current phase (e.g., "Analyzing Papers")
 - Status updates
 - Completion time
 
 ### 5. Review Results
+
 - **Papers**: View successful + failed analyses
 - **Hypotheses**: Filter by novelty/feasibility
 - **Experiments**: See test results
@@ -89,31 +102,33 @@ The dashboard will show:
 
 ## 📊 Progress Phases
 
-| Phase | % | Description |
-|-------|---|-------------|
-| Starting | 0 | Initializing research cycle |
-| Collecting Papers | 10 | Searching arXiv database |
-| Papers Collected | 20 | Downloads complete |
-| Analyzing Papers | 30 | AI extracting insights |
-| Analysis Complete | 45 | Research gaps identified |
-| Generating Hypotheses | 55 | Creating testable ideas |
-| Hypotheses Generated | 65 | Hypotheses ready for testing |
-| Testing Hypotheses | 75 | Computational validation |
-| Testing Complete | 85 | Validation finished |
-| Evaluating Results | 90 | Analyzing test results |
-| Discoveries Found | 95 | Promising results identified |
-| Completed | 100 | Research cycle complete! |
+| Phase                 | %   | Description                  |
+| --------------------- | --- | ---------------------------- |
+| Starting              | 0   | Initializing research cycle  |
+| Collecting Papers     | 10  | Searching arXiv database     |
+| Papers Collected      | 20  | Downloads complete           |
+| Analyzing Papers      | 30  | AI extracting insights       |
+| Analysis Complete     | 45  | Research gaps identified     |
+| Generating Hypotheses | 55  | Creating testable ideas      |
+| Hypotheses Generated  | 65  | Hypotheses ready for testing |
+| Testing Hypotheses    | 75  | Computational validation     |
+| Testing Complete      | 85  | Validation finished          |
+| Evaluating Results    | 90  | Analyzing test results       |
+| Discoveries Found     | 95  | Promising results identified |
+| Completed             | 100 | Research cycle complete!     |
 
 ---
 
 ## 🛠️ Files Changed
 
 ### New Files (3)
+
 1. ✨ `src/utils/session_manager.py` - Session tracking system
 2. ✨ `INTERACTIVE_GUIDE.md` - Comprehensive user guide
 3. ✨ `tests/test_session_manager.py` - Unit tests
 
 ### Modified Files (4)
+
 1. 🔧 `dashboard/app.py` - Added Home tab + failed papers view
 2. 🔧 `src/agent/autonomous_agent.py` - Integrated progress tracking
 3. 🔧 `src/analysis/paper_analyzer.py` - Added error recovery
@@ -125,22 +140,24 @@ The dashboard will show:
 
 ### Before → After
 
-| Feature | Before | After |
-|---------|--------|-------|
-| Research Input | ❌ Edit scripts manually | ✅ GUI form in dashboard |
-| Session Tracking | ❌ No tracking | ✅ Full session management |
-| Progress Updates | ❌ No visibility | ✅ Live 0-100% updates |
-| Error Handling | ❌ Silent failures | ✅ Retry + error display |
-| Failed Papers | ❌ Hidden | ✅ Dedicated section |
+| Feature          | Before                   | After                      |
+| ---------------- | ------------------------ | -------------------------- |
+| Research Input   | ❌ Edit scripts manually | ✅ GUI form in dashboard   |
+| Session Tracking | ❌ No tracking           | ✅ Full session management |
+| Progress Updates | ❌ No visibility         | ✅ Live 0-100% updates     |
+| Error Handling   | ❌ Silent failures       | ✅ Retry + error display   |
+| Failed Papers    | ❌ Hidden                | ✅ Dedicated section       |
 
 ---
 
 ## 📚 Documentation
 
 ### Read the Complete Guide
+
 👉 **[INTERACTIVE_GUIDE.md](INTERACTIVE_GUIDE.md)** - Full usage instructions
 
 Includes:
+
 - Getting started tutorial
 - Session management guide
 - Progress phase explanations
@@ -191,6 +208,7 @@ agent.save_results(session_id=session_id)
 ## 🧪 Testing
 
 All implementations have been tested and verified:
+
 - ✅ No syntax errors
 - ✅ No import errors
 - ✅ No type errors
@@ -202,12 +220,14 @@ All implementations have been tested and verified:
 ## 🎓 What This Means
 
 ### For Users:
+
 - 🎨 **Better UX**: Input topics via GUI, not code
 - 📊 **Visibility**: See what the agent is doing in real-time
 - 🔄 **Recovery**: Failed papers can be retried
 - 📈 **Tracking**: Monitor all research sessions
 
 ### For Developers:
+
 - 🏗️ **Solid Architecture**: Session-based design
 - 🔌 **Easy Integration**: Simple API for tracking
 - 🛡️ **Error Resilience**: Automatic retry logic
@@ -223,7 +243,7 @@ The Autonomous Scientific Agent is now a **fully interactive research platform**
 ✅ Real-time progress tracking  
 ✅ Session management  
 ✅ Error recovery  
-✅ Failed paper handling  
+✅ Failed paper handling
 
 **Start exploring autonomous research today!** 🧬🔬✨
 

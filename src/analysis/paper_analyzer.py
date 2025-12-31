@@ -26,7 +26,7 @@ def retry_on_error(max_retries: int = 3, backoff_factor: float = 2.0):
         def wrapper(*args, **kwargs):
             retries = 0
             last_exception = None
-            
+
             while retries < max_retries:
                 try:
                     return func(*args, **kwargs)
@@ -44,7 +44,7 @@ def retry_on_error(max_retries: int = 3, backoff_factor: float = 2.0):
                         logger.error(
                             f"All {max_retries} attempts failed for {func.__name__}: {e}"
                         )
-            
+
             raise last_exception
         return wrapper
     return decorator
@@ -171,11 +171,13 @@ class PaperAnalyzer:
 
             # Step 2: Classification with GROQ (with retry)
             logger.debug("Step 2: Classifying paper (GROQ)")
-            research_type, maturity_level = self._classify_paper_with_retry(paper)
+            research_type, maturity_level = self._classify_paper_with_retry(
+                paper)
 
             # Step 3: Deep analysis with Gemini (with retry)
             logger.debug("Step 3: Deep analysis (Gemini)")
-            deep_analysis = self._deep_analyze_with_retry(paper, entities, focus_areas)
+            deep_analysis = self._deep_analyze_with_retry(
+                paper, entities, focus_areas)
 
             # Step 4: Relevance scoring
             logger.debug("Step 4: Scoring relevance")
@@ -205,8 +207,10 @@ class PaperAnalyzer:
 
             # Validate analysis quality
             if not self._validate_analysis(analysis):
-                logger.warning(f"Analysis validation failed for {paper.arxiv_id}")
-                raise ValueError("Analysis quality check failed - insufficient data extracted")
+                logger.warning(
+                    f"Analysis validation failed for {paper.arxiv_id}")
+                raise ValueError(
+                    "Analysis quality check failed - insufficient data extracted")
 
             # Cache results
             with open(cache_file, 'w', encoding='utf-8') as f:
@@ -215,7 +219,7 @@ class PaperAnalyzer:
             logger.info(
                 f"✅ Analysis complete (relevance: {relevance_score:.1f}/10)")
             return analysis
-            
+
         except Exception as e:
             logger.error(f"Failed to analyze paper {paper.arxiv_id}: {e}")
             # Return minimal analysis with error flag
@@ -226,20 +230,20 @@ class PaperAnalyzer:
         # Check that key findings are not empty
         if not analysis.key_findings or len(analysis.key_findings) == 0:
             return False
-        
+
         # Check that at least some entities were extracted
         total_entities = (
-            len(analysis.materials) + 
-            len(analysis.properties) + 
+            len(analysis.materials) +
+            len(analysis.properties) +
             len(analysis.methods)
         )
         if total_entities == 0:
             return False
-        
+
         # Check that relevance score is reasonable
         if analysis.relevance_score <= 0 or analysis.relevance_score > 10:
             return False
-        
+
         return True
 
     def _create_failed_analysis(self, paper: Paper, error_msg: str) -> PaperAnalysis:

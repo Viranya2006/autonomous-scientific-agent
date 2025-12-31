@@ -25,7 +25,7 @@ def main():
     max_papers = 20
     max_hypotheses = 20
     max_iterations = 1
-    
+
     # Optional: Provide a session_id from the dashboard to track progress
     # Example: session_id = "session_20241231_143022"
     session_id = None
@@ -35,7 +35,7 @@ def main():
     logger.info(f"Max papers: {max_papers}")
     logger.info(f"Max hypotheses: {max_hypotheses}")
     logger.info(f"Max iterations: {max_iterations}")
-    
+
     if session_id:
         logger.info(f"Session ID: {session_id}")
 
@@ -70,15 +70,16 @@ def main():
 
     except Exception as e:
         logger.error(f"Research failed: {e}")
-        
+
         # Mark session as failed if session_id provided
         if session_id:
             try:
                 session_mgr = SessionManager()
                 session_mgr.update_session_status(session_id, "failed", str(e))
             except Exception as session_error:
-                logger.warning(f"Could not update session status: {session_error}")
-        
+                logger.warning(
+                    f"Could not update session status: {session_error}")
+
         raise
 
 
