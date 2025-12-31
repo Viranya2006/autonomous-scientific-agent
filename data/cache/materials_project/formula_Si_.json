@@ -1,0 +1,819 @@
+[
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.288019789495501,
+    "symmetry": {
+      "crystal_system": "Triclinic",
+      "symbol": "P1",
+      "hall": null,
+      "number": 1,
+      "point_group": "1",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1120447",
+    "formation_energy_per_atom": 0.37250966749999903,
+    "energy_above_hull": 0.37250966749999903,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.599954373928591,
+    "symmetry": {
+      "crystal_system": "Triclinic",
+      "symbol": "P1",
+      "hall": null,
+      "number": 1,
+      "point_group": "1",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1244933",
+    "formation_energy_per_atom": 0.34929145859999905,
+    "energy_above_hull": 0.34929145859999905,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.427656376577443,
+    "symmetry": {
+      "crystal_system": "Triclinic",
+      "symbol": "P1",
+      "hall": null,
+      "number": 1,
+      "point_group": "1",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1244971",
+    "formation_energy_per_atom": 0.31675151759999903,
+    "energy_above_hull": 0.31675151760000003,
+    "band_gap": 0.0030999999999990003
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.6634947554856963,
+    "symmetry": {
+      "crystal_system": "Triclinic",
+      "symbol": "P1",
+      "hall": null,
+      "number": 1,
+      "point_group": "1",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1244990",
+    "formation_energy_per_atom": 0.36627406769999904,
+    "energy_above_hull": 0.36627406770000004,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.431303226576872,
+    "symmetry": {
+      "crystal_system": "Triclinic",
+      "symbol": "P1",
+      "hall": null,
+      "number": 1,
+      "point_group": "1",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1245041",
+    "formation_energy_per_atom": 0.310314400899999,
+    "energy_above_hull": 0.310314400899999,
+    "band_gap": 0.027599999999999004
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.435075657647642,
+    "symmetry": {
+      "crystal_system": "Triclinic",
+      "symbol": "P1",
+      "hall": null,
+      "number": 1,
+      "point_group": "1",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1245242",
+    "formation_energy_per_atom": 0.31691021609999803,
+    "energy_above_hull": 0.31691021610000003,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.142906835476681,
+    "symmetry": {
+      "crystal_system": "Triclinic",
+      "symbol": "P1",
+      "hall": null,
+      "number": 1,
+      "point_group": "1",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1403870",
+    "formation_energy_per_atom": 1.250752009999999,
+    "energy_above_hull": 1.250752009999999,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.142906980650944,
+    "symmetry": {
+      "crystal_system": "Triclinic",
+      "symbol": "P1",
+      "hall": null,
+      "number": 1,
+      "point_group": "1",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-644693",
+    "formation_energy_per_atom": 0.41511927999999904,
+    "energy_above_hull": 0.41511927999999904,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.344581212497035,
+    "symmetry": {
+      "crystal_system": "Triclinic",
+      "symbol": "P1",
+      "hall": null,
+      "number": 1,
+      "point_group": "1",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-676011",
+    "formation_energy_per_atom": 0.44703532249999905,
+    "energy_above_hull": 0.44703532249999905,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.142906835476681,
+    "symmetry": {
+      "crystal_system": "Triclinic",
+      "symbol": "P1",
+      "hall": null,
+      "number": 1,
+      "point_group": "1",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-988210",
+    "formation_energy_per_atom": 1.9596229937499992,
+    "energy_above_hull": 1.9596229937499992,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.231027796342244,
+    "symmetry": {
+      "crystal_system": "Monoclinic",
+      "symbol": "C2/m",
+      "hall": null,
+      "number": 12,
+      "point_group": "2/m",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1079297",
+    "formation_energy_per_atom": 0.08220610625000001,
+    "energy_above_hull": 0.08220610625000001,
+    "band_gap": 0.2735
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.021832466823777,
+    "symmetry": {
+      "crystal_system": "Tetragonal",
+      "symbol": "P4_2/nmc",
+      "hall": null,
+      "number": 137,
+      "point_group": "4/mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1204046",
+    "formation_energy_per_atom": 0.178885465377357,
+    "energy_above_hull": 0.178885465377357,
+    "band_gap": 0.15080000000000002
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 3.336254210293773,
+    "symmetry": {
+      "crystal_system": "Tetragonal",
+      "symbol": "I4/mmm",
+      "hall": null,
+      "number": 139,
+      "point_group": "4/mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1056579",
+    "formation_energy_per_atom": 0.48407213000000104,
+    "energy_above_hull": 0.48407213000000104,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.193771478683577,
+    "symmetry": {
+      "crystal_system": "Tetragonal",
+      "symbol": "I4/mmm",
+      "hall": null,
+      "number": 139,
+      "point_group": "4/mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-999200",
+    "formation_energy_per_atom": 0.11663319999999901,
+    "energy_above_hull": 0.11663319999999901,
+    "band_gap": 0.439799999999999
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 3.119536545645218,
+    "symmetry": {
+      "crystal_system": "Tetragonal",
+      "symbol": "I4_1/amd",
+      "hall": null,
+      "number": 141,
+      "point_group": "4/mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-92",
+    "formation_energy_per_atom": 0.28873980000000005,
+    "energy_above_hull": 0.28873980000000005,
+    "band_gap": 0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.573426300486528,
+    "symmetry": {
+      "crystal_system": "Trigonal",
+      "symbol": "R-3",
+      "hall": null,
+      "number": 148,
+      "point_group": "-3",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-571520",
+    "formation_energy_per_atom": 0.19694103500000001,
+    "energy_above_hull": 0.19694103500000001,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.041582038415872,
+    "symmetry": {
+      "crystal_system": "Monoclinic",
+      "symbol": "C2/c",
+      "hall": null,
+      "number": 15,
+      "point_group": "2/m",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1199894",
+    "formation_energy_per_atom": 0.128874325731708,
+    "energy_above_hull": 0.128874325731707,
+    "band_gap": 0.998499999999999
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 1.977844080420144,
+    "symmetry": {
+      "crystal_system": "Trigonal",
+      "symbol": "P-3m1",
+      "hall": null,
+      "number": 164,
+      "point_group": "-3m",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1202745",
+    "formation_energy_per_atom": 0.144239747241379,
+    "energy_above_hull": 0.144239747241378,
+    "band_gap": 0.8932000000000001
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 3.3479997143102542,
+    "symmetry": {
+      "crystal_system": "Trigonal",
+      "symbol": "R-3m",
+      "hall": null,
+      "number": 166,
+      "point_group": "-3m",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1094057",
+    "formation_energy_per_atom": 0.517749729999999,
+    "energy_above_hull": 0.51774973,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.864723958637294,
+    "symmetry": {
+      "crystal_system": "Hexagonal",
+      "symbol": "P6/m",
+      "hall": null,
+      "number": 175,
+      "point_group": "6/m",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1268191",
+    "formation_energy_per_atom": 0.36004447499999903,
+    "energy_above_hull": 0.36004447500000003,
+    "band_gap": 0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.012401165721983,
+    "symmetry": {
+      "crystal_system": "Hexagonal",
+      "symbol": "P6/mmm",
+      "hall": null,
+      "number": 191,
+      "point_group": "6/mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1196961",
+    "formation_energy_per_atom": 0.11045900649999901,
+    "energy_above_hull": 0.11045900649999901,
+    "band_gap": 1.1285
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 3.1795272036870372,
+    "symmetry": {
+      "crystal_system": "Hexagonal",
+      "symbol": "P6/mmm",
+      "hall": null,
+      "number": 191,
+      "point_group": "6/mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-34",
+    "formation_energy_per_atom": 0.30530073,
+    "energy_above_hull": 0.30530073,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 3.363805589763085,
+    "symmetry": {
+      "crystal_system": "Hexagonal",
+      "symbol": "P6_3/mmc",
+      "hall": null,
+      "number": 194,
+      "point_group": "6/mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-10649",
+    "formation_energy_per_atom": 0.512949795,
+    "energy_above_hull": 0.512949795,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.935021069765347,
+    "symmetry": {
+      "crystal_system": "Hexagonal",
+      "symbol": "P6_3/mmc",
+      "hall": null,
+      "number": 194,
+      "point_group": "6/mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1120747",
+    "formation_energy_per_atom": 0.453742336666665,
+    "energy_above_hull": 0.453742336666666,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.00791585028713,
+    "symmetry": {
+      "crystal_system": "Hexagonal",
+      "symbol": "P6_3/mmc",
+      "hall": null,
+      "number": 194,
+      "point_group": "6/mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1203790",
+    "formation_energy_per_atom": 0.08439319661764601,
+    "energy_above_hull": 0.08439319661764601,
+    "band_gap": 1.359999999999999
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.317290669455944,
+    "symmetry": {
+      "crystal_system": "Hexagonal",
+      "symbol": "P6_3/mmc",
+      "hall": null,
+      "number": 194,
+      "point_group": "6/mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-165",
+    "formation_energy_per_atom": 0.013606870000000002,
+    "energy_above_hull": 0.013606870000000002,
+    "band_gap": 0.438899999999999
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 1.9693213149399922,
+    "symmetry": {
+      "crystal_system": "Cubic",
+      "symbol": "Pa-3",
+      "hall": null,
+      "number": 205,
+      "point_group": "m-3",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1201492",
+    "formation_energy_per_atom": 0.121153145431034,
+    "energy_above_hull": 0.121153145431033,
+    "band_gap": 1.010699999999999
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.53092813115747,
+    "symmetry": {
+      "crystal_system": "Cubic",
+      "symbol": "Ia-3",
+      "hall": null,
+      "number": 206,
+      "point_group": "m-3",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-168",
+    "formation_energy_per_atom": 0.160020518749998,
+    "energy_above_hull": 0.160020518749998,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 1.9920572342568272,
+    "symmetry": {
+      "crystal_system": "Cubic",
+      "symbol": "I-43m",
+      "hall": null,
+      "number": 217,
+      "point_group": "-43m",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1200830",
+    "formation_energy_per_atom": 0.14326103524390202,
+    "energy_above_hull": 0.14326103524390102,
+    "band_gap": 1.073499999999999
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.113073015134004,
+    "symmetry": {
+      "crystal_system": "Cubic",
+      "symbol": "I-43m",
+      "hall": null,
+      "number": 217,
+      "point_group": "-43m",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-971661",
+    "formation_energy_per_atom": 0.10747738456521701,
+    "energy_above_hull": 0.10747738456521601,
+    "band_gap": 1.372199999999999
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.033231711125001,
+    "symmetry": {
+      "crystal_system": "Cubic",
+      "symbol": "Pm-3n",
+      "hall": null,
+      "number": 223,
+      "point_group": "m-3m",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-971662",
+    "formation_energy_per_atom": 0.09184994826086901,
+    "energy_above_hull": 0.09184994826086801,
+    "band_gap": 1.4428
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 3.3422177369201362,
+    "symmetry": {
+      "crystal_system": "Cubic",
+      "symbol": "Fm-3m",
+      "hall": null,
+      "number": 225,
+      "point_group": "m-3m",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-27",
+    "formation_energy_per_atom": 0.53156601,
+    "energy_above_hull": 0.53156601,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.312800253345134,
+    "symmetry": {
+      "crystal_system": "Cubic",
+      "symbol": "Fd-3m",
+      "hall": null,
+      "number": 227,
+      "point_group": "m-3m",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-149",
+    "formation_energy_per_atom": 0.0,
+    "energy_above_hull": 0.0,
+    "band_gap": 0.6105
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.00607082485501,
+    "symmetry": {
+      "crystal_system": "Cubic",
+      "symbol": "Fd-3m",
+      "hall": null,
+      "number": 227,
+      "point_group": "m-3m",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-16220",
+    "formation_energy_per_atom": 0.393193089411763,
+    "energy_above_hull": 0.393193089411763,
+    "band_gap": 0.5334000000000001
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 3.364140332420601,
+    "symmetry": {
+      "crystal_system": "Cubic",
+      "symbol": "Im-3m",
+      "hall": null,
+      "number": 229,
+      "point_group": "m-3m",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1014212",
+    "formation_energy_per_atom": 0.525495500000001,
+    "energy_above_hull": 0.525495500000001,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 1.88413449553028,
+    "symmetry": {
+      "crystal_system": "Cubic",
+      "symbol": "Im-3m",
+      "hall": null,
+      "number": 229,
+      "point_group": "m-3m",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1072544",
+    "formation_energy_per_atom": 0.22239860833333203,
+    "energy_above_hull": 0.22239860833333203,
+    "band_gap": 0.1444
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 3.037093781943305,
+    "symmetry": {
+      "crystal_system": "Orthorhombic",
+      "symbol": "Cmcm",
+      "hall": null,
+      "number": 63,
+      "point_group": "mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1001113",
+    "formation_energy_per_atom": 0.48982796249999905,
+    "energy_above_hull": 0.48982796249999905,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.154770179587084,
+    "symmetry": {
+      "crystal_system": "Orthorhombic",
+      "symbol": "Cmcm",
+      "hall": null,
+      "number": 63,
+      "point_group": "mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1095269",
+    "formation_energy_per_atom": 0.11054831833333201,
+    "energy_above_hull": 0.11054831833333201,
+    "band_gap": 0.5013000000000001
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.005337972467486,
+    "symmetry": {
+      "crystal_system": "Orthorhombic",
+      "symbol": "Cmcm",
+      "hall": null,
+      "number": 63,
+      "point_group": "mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1204627",
+    "formation_energy_per_atom": 0.12913409456521602,
+    "energy_above_hull": 0.12913409456521602,
+    "band_gap": 1.521599999999999
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 2.997685500438472,
+    "symmetry": {
+      "crystal_system": "Orthorhombic",
+      "symbol": "Cmcm",
+      "hall": null,
+      "number": 63,
+      "point_group": "mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-2351841",
+    "formation_energy_per_atom": 0.44883388250000006,
+    "energy_above_hull": 0.44883388250000006,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 3.191772611073461,
+    "symmetry": {
+      "crystal_system": "Orthorhombic",
+      "symbol": "Cmce",
+      "hall": null,
+      "number": 64,
+      "point_group": "mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1079649",
+    "formation_energy_per_atom": 0.42791178374999905,
+    "energy_above_hull": 0.42791178374999905,
+    "band_gap": 0.0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 3.117831046882785,
+    "symmetry": {
+      "crystal_system": "Orthorhombic",
+      "symbol": "Fmmm",
+      "hall": null,
+      "number": 69,
+      "point_group": "mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-109",
+    "formation_energy_per_atom": 0.29561939749999905,
+    "energy_above_hull": 0.29561939749999905,
+    "band_gap": 0
+  },
+  {
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "density": 3.095993362015338,
+    "symmetry": {
+      "crystal_system": "Orthorhombic",
+      "symbol": "Fmmm",
+      "hall": null,
+      "number": 69,
+      "point_group": "mmm",
+      "symprec": 0.1,
+      "angle_tolerance": 5.0,
+      "version": "2.5.0"
+    },
+    "material_id": "mp-1524805",
+    "formation_energy_per_atom": 0.6645676274999981,
+    "energy_above_hull": 0.6645676274999981,
+    "band_gap": 0
+  }
+]

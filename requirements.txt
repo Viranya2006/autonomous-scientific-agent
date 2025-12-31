@@ -1,0 +1,42 @@
+# Core Dependencies for Autonomous Scientific Agent
+# Python 3.11+ Compatible Versions
+
+# HTTP Requests and API Communication
+requests==2.31.0
+
+# Environment Variable Management
+python-dotenv==1.0.0
+
+# Scientific Paper Access
+arxiv==2.1.0
+
+# Data Processing and Analysis
+pandas==2.1.4
+numpy==1.26.3
+
+# Graph/Network Analysis (Phase 2: Knowledge Graphs)
+networkx==3.2.1
+
+# Data Visualization (Phase 2: Analysis & Exploration)
+matplotlib==3.8.2
+seaborn==0.13.0
+
+# Interactive Notebooks (Phase 2: Exploration)
+jupyter==1.0.0
+ipykernel==6.29.0
+
+# Progress Bars and User Feedback
+tqdm==4.66.1
+
+# Configuration File Support
+pyyaml==6.0.1
+
+# Advanced Logging
+loguru==0.7.2
+
+# Machine Learning for Novelty Checking (Phase 3)
+scikit-learn==1.3.2
+
+# Web Dashboard (Phase 4)
+streamlit==1.29.0
+plotly==5.18.0

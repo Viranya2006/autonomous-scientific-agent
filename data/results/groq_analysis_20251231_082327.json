@@ -1,0 +1,499 @@
+[
+  {
+    "paper": {
+      "title": "Design of battery materials via defects and doping",
+      "arxiv_id": "2211.04977v2",
+      "authors": [
+        "Khang Hoang"
+      ],
+      "url": "http://arxiv.org/abs/2211.04977v2"
+    },
+    "analysis": {
+      "materials": [
+        "transition-metal oxides",
+        "battery cathode materials"
+      ],
+      "key_finding": "Defect physics can be used as a conceptual and theoretical framework for understanding and designing battery materials.",
+      "relevance_score": 8,
+      "research_type": "computational",
+      "potential_gaps": [
+        "Understanding and designing battery materials for real-world applications beyond cathode materials",
+        "Investigating the effects of defects and doping on anode materials and other battery components"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Quantum Batteries: A Materials Science Perspective",
+      "arxiv_id": "2503.03542v1",
+      "authors": [
+        "A. Camposeo",
+        "T. Virgili",
+        "F. Lombardi"
+      ],
+      "url": "http://arxiv.org/abs/2503.03542v1"
+    },
+    "analysis": {
+      "materials": [
+        "Organic microcavities",
+        "Inorganic nanostructures (quantum wells and dots)",
+        "Perovskite systems",
+        "(Normal and high-temperature) superconductors"
+      ],
+      "key_finding": "The paper discusses solid-state materials platforms that could lead to fully operational quantum batteries.",
+      "relevance_score": 8,
+      "research_type": "review",
+      "potential_gaps": [
+        "Further experimental implementations are needed to demonstrate the feasibility of quantum batteries.",
+        "More research is required to explore the potential of these materials platforms in fully operational quantum batteries."
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Oxygen redox in battery cathodes: A brief overview",
+      "arxiv_id": "2408.09942v1",
+      "authors": [
+        "M. Hussein N. Assadi",
+        "Dorian A. H. Hanaor"
+      ],
+      "url": "http://arxiv.org/abs/2408.09942v1"
+    },
+    "analysis": {
+      "materials": [
+        "Lithium-ion battery systems",
+        "Sodium-ion battery systems"
+      ],
+      "key_finding": "Directly probing anionic redox mechanisms is not possible, but computational analysis by density functional theory can provide insights into anionic redox activity.",
+      "relevance_score": 8,
+      "research_type": "computational",
+      "potential_gaps": [
+        "Understanding of anionic redox mechanisms in battery materials is still limited, and further research is needed to harness these effects and maximize capacity in future electrode materials."
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Synthesis and physical properties of Na$_x$TO$_2$ (T=Mn, Co) nanostructures for cathode materials in Na--ion batteries",
+      "arxiv_id": "1804.06157v1",
+      "authors": [
+        "Mahesh Chandra",
+        "Rishabh Shukla",
+        "Muhammad Rashid"
+      ],
+      "url": "http://arxiv.org/abs/1804.06157v1"
+    },
+    "analysis": {
+      "materials": [
+        "Na_xTO_2 (T=Mn, Co)",
+        "Na_0.6MnO_2",
+        "Na_0.7CoO_2"
+      ],
+      "key_finding": "The study found that Na_0.7CoO_2 is semiconducting in nature, with conduction taking place through variable range hopping and activation mechanisms, while Na_0.6MnO_2 is highly insulating.",
+      "relevance_score": 8,
+      "research_type": "experimental",
+      "potential_gaps": [
+        "Investigation of the long-range ordering of Mn/Co ions at temperatures below 5 K",
+        "Further study of the conduction mechanisms in Na_0.6MnO_2 at elevated temperatures"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Mechanism of Na-ionic conduction in the high efficient layered battery material Na2Mn3O7",
+      "arxiv_id": "2106.12167v1",
+      "authors": [
+        "Bikash Saha",
+        "A. K. Bera",
+        "S. M. Yusuf"
+      ],
+      "url": "http://arxiv.org/abs/2106.12167v1"
+    },
+    "analysis": {
+      "materials": [
+        "Na2Mn3O7",
+        "Mn"
+      ],
+      "key_finding": "The study reveals a long-range Na-ionic conductivity in the layered battery material Na2Mn3O7 with a significant enhancement of conductivity with increasing temperature.",
+      "relevance_score": 8,
+      "research_type": "experimental",
+      "potential_gaps": [
+        "Investigation of Na-ionic conduction at lower temperatures",
+        "Further analysis of the material's properties at different frequencies and temperatures"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Quantitative characterisation of the layered structure within lithium-ion batteries using ultrasonic resonance",
+      "arxiv_id": "2203.04149v2",
+      "authors": [
+        "Ming Huang",
+        "Niall Kirkaldy",
+        "Yan Zhao"
+      ],
+      "url": "http://arxiv.org/abs/2203.04149v2"
+    },
+    "analysis": {
+      "materials": [
+        "Lithium-ion batteries (LIBs)"
+      ],
+      "key_finding": "A non-destructive characterisation technique using ultrasonic resonance is developed to quantify the layered structure within lithium-ion batteries, providing information on layer number, electrode thickness, internal layer image, and charge state variations.",
+      "relevance_score": 8,
+      "research_type": "experimental",
+      "potential_gaps": [
+        "Assurance of performance, durability, and safety of lithium-ion batteries beyond internal state characterisation"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Additive manufacturing for energy storage: Methods, designs and materials selection for customizable 3D printed batteries and supercapacitors",
+      "arxiv_id": "1912.04755v1",
+      "authors": [
+        "Umair Gulzar",
+        "Colm Glynn",
+        "Colm O'Dwyer"
+      ],
+      "url": "http://arxiv.org/abs/1912.04755v1"
+    },
+    "analysis": {
+      "materials": [
+        "active materials",
+        "composites"
+      ],
+      "key_finding": "Additive manufacturing and 3D printing can revolutionize the fabrication process of electrochemical energy storage devices by allowing for customizable designs based on end-use application needs.",
+      "relevance_score": 8,
+      "research_type": "review",
+      "potential_gaps": [
+        "performance requirements",
+        "electrochemistry",
+        "interplay between electrochemical response, stability, material type, object complexity, and end-use application"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Probing magnetic ordering in air stable iron-rich van der Waals minerals",
+      "arxiv_id": "2304.06533v1",
+      "authors": [
+        "Muhammad Zubair Khan",
+        "Oleg E. Peil",
+        "Apoorva Sharma"
+      ],
+      "url": "http://arxiv.org/abs/2304.06533v1"
+    },
+    "analysis": {
+      "materials": [
+        "Iron-rich van der Waals minerals",
+        "Minnesotaite",
+        "Annite",
+        "Biotite",
+        "Iodide compounds",
+        "Telluride compounds"
+      ],
+      "key_finding": "The research demonstrates magnetic ordering in naturally occurring iron-rich two-dimensional phyllosilicates, offering air-stable complex layered systems.",
+      "relevance_score": 8,
+      "research_type": "experimental",
+      "potential_gaps": [
+        "Lack of ambient stability in synthetic iodide and telluride based compounds",
+        "Limited exploration of naturally occurring layered magnetic materials"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Topological Quantum Materials for Energy Conversion and Storage",
+      "arxiv_id": "2309.03488v1",
+      "authors": [
+        "Huixia Luo",
+        "Peifeng Yu",
+        "Guowei Li"
+      ],
+      "url": "http://arxiv.org/abs/2309.03488v1"
+    },
+    "analysis": {
+      "materials": [
+        "Topological quantum materials (TQMs)"
+      ],
+      "key_finding": "TQMs have novel quantum states that provide a stable electron bath with high conductivity and carrier mobility, making them an ideal platform for energy conversion and storage.",
+      "relevance_score": 8,
+      "research_type": "review",
+      "potential_gaps": [
+        "Understanding of surface reactions in TQMs",
+        "Development of highly efficient materials for energy conversion and storage"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Cathode Materials for Lithium Ion Batteries (LIBs): A Review on Materials related aspects towards High Energy Density LIBs",
+      "arxiv_id": "2008.10896v2",
+      "authors": [
+        "Ambesh Dixit"
+      ],
+      "url": "http://arxiv.org/abs/2008.10896v2"
+    },
+    "analysis": {
+      "materials": [
+        "Lithium cobalt oxide",
+        "Ternary oxides (LiT)",
+        "Other unspecified cathode materials (e.g. LiNiO2, LiMn2O4, etc.)"
+      ],
+      "key_finding": "The development of cathode materials for lithium-ion batteries has progressed through various generations, but challenges remain in achieving high energy density, cyclic stability, and efficient ion and charge transport.",
+      "relevance_score": 8,
+      "research_type": "review",
+      "potential_gaps": [
+        "Improving cyclic stability of cathode materials",
+        "Enhancing structural and thermal stability of cathode materials",
+        "Increasing operating voltage of cathode materials",
+        "Improving ionic and electronic conductivity of cathode materials for efficient ion and charge transport"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "CuBr2-A New Multiferroic Material with High Critical Temperature",
+      "arxiv_id": "1205.5318v1",
+      "authors": [
+        "L. Zhao",
+        "T. L. Hung",
+        "C. C. Li"
+      ],
+      "url": "http://arxiv.org/abs/1205.5318v1"
+    },
+    "analysis": {
+      "materials": [
+        "CuBr2"
+      ],
+      "key_finding": "A new multiferroic material, CuBr2, has been discovered with a high transition temperature close to liquid nitrogen temperature.",
+      "relevance_score": 8,
+      "research_type": "experimental",
+      "potential_gaps": [
+        "Further investigation into the properties of CuBr2, such as its dielectric and magnetic behavior, is needed to fully understand its potential applications.",
+        "The search for high-temperature multiferroic materials among low-dimensional spin systems may require a deeper exploration of anion effects and their impact on material properties."
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Magnetic Properties of Potential Li-ion Battery Materials",
+      "arxiv_id": "2501.12467v1",
+      "authors": [
+        "Md Rakibul Karim Akanda",
+        "Amaya Alexandria Holmes",
+        "Jinorri Wilson"
+      ],
+      "url": "http://arxiv.org/abs/2501.12467v1"
+    },
+    "analysis": {
+      "materials": [
+        "Li-ion battery materials",
+        "specifically mentioned potential materials are not listed in the abstract"
+      ],
+      "key_finding": "The study analyzed the magnetic properties of potential Li-ion battery materials using Quantum Espresso software to enhance Li-ion battery performance.",
+      "relevance_score": 8,
+      "research_type": "computational",
+      "potential_gaps": [
+        "Thermal runaway incidents and safety concerns in Li-ion batteries, cooling techniques, and the history of battery materials are discussed, but specific research gaps are not mentioned in the abstract."
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Sub-Nanometer Channels Embedded in Two-Dimensional Materials",
+      "arxiv_id": "1707.09880v2",
+      "authors": [
+        "Yimo Han",
+        "Ming-Yang Li",
+        "Gang-Seob Jung"
+      ],
+      "url": "http://arxiv.org/abs/1707.09880v2"
+    },
+    "analysis": {
+      "materials": [
+        "MoS2",
+        "WSe2"
+      ],
+      "key_finding": "Researchers have successfully synthesized sub-nanometer-wide 1D MoS2 channels embedded within WSe2 monolayers using a dislocation-catalyzed approach.",
+      "relevance_score": 8,
+      "research_type": "experimental",
+      "potential_gaps": [
+        "scalability of the dislocation-catalyzed approach",
+        "applications of the synthesized 1D channels in next-generation electronics"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Carbon ene-yne graphyne monolayer as an outstanding anode material for Li/Naion batteries",
+      "arxiv_id": "1801.09521v1",
+      "authors": [
+        "Meysam Makaremi",
+        "Bohayra Mortazavi",
+        "Chandra Veer Singha"
+      ],
+      "url": "http://arxiv.org/abs/1801.09521v1"
+    },
+    "analysis": {
+      "materials": [
+        "Carbon ene-yne graphyne monolayer",
+        "Mg",
+        "Na",
+        "Li"
+      ],
+      "key_finding": "The carbon ene-yne graphyne monolayer exhibits outstanding performance as an anode material for Li/Na-ion batteries.",
+      "relevance_score": 8,
+      "research_type": "computational",
+      "potential_gaps": [
+        "Experimental synthesis and characterization of the carbon ene-yne material",
+        "Experimental validation of the theoretical storage capacity and ionic intercalation process"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Magnetic Anisotropy in Two-dimensional van der Waals Magnetic Materials and Their Heterostructures: Importance, Mechanisms, and Opportunities",
+      "arxiv_id": "2508.04952v1",
+      "authors": [
+        "Yusheng Hou",
+        "Ruqian Wu"
+      ],
+      "url": "http://arxiv.org/abs/2508.04952v1"
+    },
+    "analysis": {
+      "materials": [
+        "2D van der Waals (vdW) monolayers",
+        "heterostructures"
+      ],
+      "key_finding": "Magnetic anisotropy plays a crucial role in stabilizing long-range magnetic order in 2D vdW materials, enabling intrinsic 2D magnetism and shaping their electronic, magnetic, and topological properties.",
+      "relevance_score": 8,
+      "research_type": "review",
+      "potential_gaps": [
+        "Understanding the fundamental mechanisms that determine magnetic anisotropy in 2D vdW materials",
+        "Investigating the effects of strong ligand spin-orbit coupling on magnetic anisotropy"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "First-principles design and subsequent synthesis of a material to search for the permanent electric dipole moment of the electron",
+      "arxiv_id": "1002.0376v2",
+      "authors": [
+        "K. Z. Rushchanskii",
+        "S. Kamba",
+        "V. Goian"
+      ],
+      "url": "http://arxiv.org/abs/1002.0376v2"
+    },
+    "analysis": {
+      "materials": [
+        "Europium barium titanate (Eu$_{0.5}$Ba$_{0.5}$TiO$_3$)"
+      ],
+      "key_finding": "The material Eu$_{0.5}$Ba$_{0.5}$TiO$_3$ exhibits large and pressure-dependent ferroelectric polarization, local magnetic moments, and absence of magnetic ordering even at liquid helium temperature.",
+      "relevance_score": 8,
+      "research_type": "experimental/computational",
+      "potential_gaps": [
+        "Investigation of the material's properties under different conditions (e.g., varying temperatures, pressures), potential applications of the material in energy storage or other fields, and further studies to confirm the absence of magnetic ordering at liquid helium temperature."
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Non-linear Hall Effects: Mechanisms and Materials",
+      "arxiv_id": "2401.02282v2",
+      "authors": [
+        "Arka Bandyopadhyay",
+        "Nesta Benno Joseph",
+        "Awadhesh Narayan"
+      ],
+      "url": "http://arxiv.org/abs/2401.02282v2"
+    },
+    "analysis": {
+      "materials": [
+        "time-reversal symmetric crystals",
+        "candidate materials predicted to exhibit sizable and tunable Berry curvature dipole"
+      ],
+      "key_finding": "The paper elucidates the quantum origin of the second-order Hall response, focusing on the Berry curvature dipole, and discusses the possibility of obtaining nonlinear Hall responses beyond the second order.",
+      "relevance_score": 8,
+      "research_type": "review",
+      "potential_gaps": [
+        "theoretical models for nonlinear Hall effects",
+        "experimental exploration of candidate materials"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Energy-GNoME: A Living Database of Selected Materials for Energy Applications",
+      "arxiv_id": "2411.10125v1",
+      "authors": [
+        "Paolo De Angelis",
+        "Giovanni Trezza",
+        "Giulio Barletta"
+      ],
+      "url": "http://arxiv.org/abs/2411.10125v1"
+    },
+    "analysis": {
+      "materials": [
+        "novel stable crystals",
+        "thermoelectric materials",
+        "novel battery cathodes",
+        "novel perovskites"
+      ],
+      "key_finding": "The Energy-GNoME database identifies over 33,000 materials with potential as energy materials using Machine Learning and Deep Learning tools.",
+      "relevance_score": 8,
+      "research_type": "computational",
+      "potential_gaps": [
+        "Further experimental validation of the predicted materials properties",
+        "Investigation of the scalability and practicality of the identified materials for energy applications"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "Metal hydride material requirements for automotive hydrogen storage systems",
+      "arxiv_id": "1307.0890v1",
+      "authors": [
+        "Jose Miguel Pasini",
+        "Claudio Corgnale",
+        "Bart A. van Hassel"
+      ],
+      "url": "http://arxiv.org/abs/1307.0890v1"
+    },
+    "analysis": {
+      "materials": [
+        "Metal hydride"
+      ],
+      "key_finding": "No current on-board rechargeable metal hydride satisfies the material-level requirements for automotive hydrogen storage systems to meet the DOE targets for 2017.",
+      "relevance_score": 8,
+      "research_type": "computational",
+      "potential_gaps": [
+        "Improvement of existing metal hydride materials to meet the DOE targets, Development of new metal hydride materials with better performance, Investigation of alternative hydrogen storage systems"
+      ]
+    }
+  },
+  {
+    "paper": {
+      "title": "A mono-material Nernst thermopile with hermaphroditic legs",
+      "arxiv_id": "2103.01467v1",
+      "authors": [
+        "Xiaokang Li",
+        "Zengwei Zhu",
+        "Kamran Behnia"
+      ],
+      "url": "http://arxiv.org/abs/2103.01467v1"
+    },
+    "analysis": {
+      "materials": [
+        "Mn$_3$Sn"
+      ],
+      "key_finding": "The researchers designed and built a thermopile using a single material, Mn$_3$Sn, with hermaphroditic legs that exploit the large lag angle between the applied field and magnetization.",
+      "relevance_score": 8,
+      "research_type": "experimental",
+      "potential_gaps": [
+        "The potential gap in this research could be the exploration of other topological magnets that exhibit the anomalous Nernst effect, and the scalability of this design for practical applications."
+      ]
+    }
+  }
+]
