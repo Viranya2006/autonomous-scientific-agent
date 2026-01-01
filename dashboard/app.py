@@ -3,7 +3,6 @@ Streamlit Dashboard for Autonomous Scientific Agent
 Beautiful web interface for monitoring and exploring research
 """
 
-from src.utils.session_manager import SessionManager
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -16,6 +15,9 @@ import threading
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
+
+# Import after path is set
+from src.utils.session_manager import SessionManager
 
 # Page config
 st.set_page_config(
